@@ -1,0 +1,74 @@
+<div>
+    <div style="width:100%;margin-bottom:2px;" class="underline">MetLife's Current Weather
+      <span style="margin-left:100px;">
+        <a href="https://worldpostalcode.com/united-states/" target="blank" style="color:yellow;">US Post Code List</a>
+      </span>
+      <span style="margin-left:100px;">
+        <input id="clientId" style="width:120px;" type="text" ng-model="clientId">
+        <button class="btn" style="height:90%;" ng-click="clientChange()">Change Id</button>
+      </span>
+    </div>
+    <table style="width:100%;padding-left:15px;color:beige;" class="table">
+      <colgroup>
+        <col width="60px;">
+        <col width="500px;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>Zip Code</th>
+          <td><input id="zip" style="width:100px" type="text" maxlength="5" ng-model="zip" ng-change="zipUpdate()"></td>
+        </tr>
+        <tr>
+          <th>Location</th>
+          <td class="{{colorStyle}}">{{zipCity}}</td>
+        </tr>
+        <tr>
+          <th>Weather</th>
+          <td class="{{colorStyle}}">{{zipWeather}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <div style="width:100%; padding-left:15px">
+      <div>
+      	<div id="zipcode" class="headerText" style="width:10em">Zip Code</div>
+      	<div id="location" class="headerText" style="width:10em">Location</div>
+      	<div id="weather" class="headerText">Weather</div>
+      </div>
+
+      <div style="width:100%">
+      	<div class="headerText" style="width:10em">
+      		<span><input id="zip1" style="width:100%" type="text" ng-model="zip1m" ng-change="zip(1)"></span>
+      	</div>
+      	<div id="zip1city" class="underline" style="width:10em">&nbsp;{{zip1City}}</div>
+      	<div id="zip1weather" class="underline">&nbsp;{{zip1Weather}}</div>
+      </div>
+  	</div> -->
+
+    <div style="width:100%;margin-top:30px;" class="underline">Weather Search History</div>
+    <table style="color:beige;text-align: center;" class="table">
+      <colgroup>
+        <col width="100px;">
+        <col width="100px;">
+        <col width="400px;">
+        <col width="150px;">
+      </colgroup>
+      <tbody>
+        <tr ng-hide="isHistoryEmpty()">
+          <th>Zip Code</th>
+          <th>Location</th>
+          <th>Weather</th>
+          <th>Datetime</th>
+        </tr>
+        <tr ng-repeat="input in inputHistory.slice().reverse()">
+          <td>{{input.zip}}</td>
+          <td>{{input.zipCity}}</td>
+          <td>{{input.zipWeather}}</td>
+          <td>{{input.zipTime}}</td>
+        </tr>
+        <tr ng-show="isHistoryEmpty()">
+          <td colspan="4">No History Data for this Client</td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>

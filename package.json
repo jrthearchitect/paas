@@ -1,0 +1,36 @@
+{
+  "name": "WReport",
+  "version": "0.0.1",
+  "description": "Weather Report",
+  "private": true,
+  "dependencies": {
+    "body-parser": "*",
+    "bower": "^1.3.12",
+    "ejs": "*",
+    "express": "*",
+    "mongodb": "3.0.4",
+    "request": "^2.65.0"
+  },
+  "engines": {
+    "node": "4.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "grunt": "^1.0.1",
+    "grunt-available-tasks": "^0.6.2",
+    "grunt-bower-installer": "^0.3.6",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-istanbul": "^0.7.0",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-proxy": "0.0.3",
+    "grunt-sass": "^1.1.0",
+    "mocha": "^2.3.3",
+    "rewire": "^2.3.4",
+    "saucelabs": "^1.0.1",
+    "selenium-webdriver": "2.44.0",
+    "sinon": "^1.17.7",
+    "supertest": "^1.1.0"
+  }
+}
